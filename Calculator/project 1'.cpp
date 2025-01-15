@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	int choice;
+	int choice, val1, val2, moderesult;
 	double num1, num2, result;
 	cout << "___***< Welcome to the Calculator program >***___" << endl;
 	do
@@ -13,8 +13,8 @@ int main()
 		cout << "3.Multiplication (*)" << endl;
 		cout << "4.Division (/)" << endl;
 		cout << "5.Modulus (%)" << endl;
-		cout << "6.Exit:
-		cout << "Enter your choice: ";
+		cout << "6.Exit" << endl;
+			cout << "Enter your choice: ";
 		cin >> choice;
 		if (choice == 6)
 		{
@@ -40,31 +40,32 @@ int main()
 			cout << "Result = " << result << endl;
 			break;
 		case 4:
-				if (num2 == 0)
-				{
-					cout << "Error : Division by zero is not allowed: " << endl;
-				}
-				else
-				{
-					result = num1 / num2;
-					cout << "Result: " << result << endl;
-				}
+			if (num2 == 0)
+			{
+				cout << "Error : Division by zero is not allowed: " << endl;
+			}
+			else
+			{
+				result = num1 / num2;
+				cout << "Result: " << result << endl;
+			}
 			break;
 		case 5:
-			        if (num2 == 0)
-				{
-					cout << "Error : Division by zero is not allowed: " << endl;
-				}
-			        else
-				{
-					result = num1 % num2;
-					cout << "Result = "<< result << endl;
-				}
+			val1 = int(num1);
+			val2 = int(num2);
+			if (num2 == 0)
+			{
+				cout << "Error : Division by zero is not allowed: " << endl;
+			}
+			else
+			{
+				moderesult = val1 % val2;
+				cout << "Result = " << moderesult << endl;
+			}
 			break;
-			default:
-				cout << "invalid choice: " << endl;
+		default:
+			cout << "invalid choice: " << endl;
 		}
-	}
-	while (choice != 6);
+	} while (choice != 6);
 	return 0;
 }
