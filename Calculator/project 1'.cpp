@@ -8,14 +8,15 @@ int main()
 	do
 	{
 		cout << "\n Select an operator:" << endl;
-		cout << "1.Addition(+)" << endl;
-		cout << "2.Subtraction(-)" << endl;
-		cout << "3.Multiplication(*)" << endl;
-		cout << "4.Division(/)" << endl;
-		cout << "5.Exit:" << endl;
+		cout << "1.Addition (+)" << endl;
+		cout << "2.Subtraction (-)" << endl;
+		cout << "3.Multiplication (*)" << endl;
+		cout << "4.Division (/)" << endl;
+		cout << "5.Modulus (%)" << endl;
+		cout << "6.Exit:
 		cout << "Enter your choice: ";
 		cin >> choice;
-		if (choice == 5)
+		if (choice == 6)
 		{
 			cout << "Exiting the program : GoodBay!" << endl;
 			break;
@@ -49,10 +50,21 @@ int main()
 					cout << "Result: " << result << endl;
 				}
 			break;
+		case 5:
+			        if (num2 == 0)
+				{
+					cout << "Error : Division by zero is not allowed: " << endl;
+				}
+			        else
+				{
+					result = num1 % num2;
+					cout << "Result = "<< result << endl;
+				}
+			break;
 			default:
 				cout << "invalid choice: " << endl;
 		}
 	}
-	while (choice != 5);
+	while (choice != 6);
 	return 0;
 }
